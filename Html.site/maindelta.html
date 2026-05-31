@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delta Video</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+<!-- LOGIN FORM -->
+<div class="wrapper active" id="loginForm">
+    <form>
+        <h1>Delta.com</h1>
+
+        <div class="input-box">
+            
+        </div>
+
+        <div class="input-box">
+            
+        </div>
+
+        <button type="button" class="btn" onclick="showLoading()">
+    CLICK TO OPEN
+</button>
+
+    </form>
+</div>
+<div class="wrapper" id="loadingForm" text-align:center;">
+    <h1 id="loadingText">Opening Delta.com</h1>
+    <div class="loader"></div>
+</div>
+
+<!-- REGISTER FORM -->
+<div class="wrapper" id="registerForm" >
+    <form>
+        <h1>Delta Register.com</h1>
+
+        <div class="input-box">
+            <input type="text" placeholder="Gmail" required>
+            <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-box">
+            <input type="text" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <div class="remember-forgot">
+            <label>
+                <input type="checkbox"> Remember Me Save
+            </label>
+
+            <a href="javascript:void(0)" onclick="showReset()">
+                Press To Reset Pass
+            </a>
+        </div>
+
+        <button type="button" class="btn" onclick="showWelcome()">
+    Click To Next
+</button>
+
+        <div class="register-link">
+            <p>
+                Back To Login Page
+                <a href="javascript:void(0)" onclick="showLogin()">
+                    Click
+                </a>
+            </p>
+        </div>
+    </form>
+</div>
+
+<!-- RESET PASSWORD FORM -->
+<div class="wrapper" id="resetForm" style=>
+    <form>
+        <h1>Delta.Reset Password</h1>
+
+        <div class="input-box">
+            <input type="email" placeholder="Enter Gmail" required>
+            <i class='bx bxs-envelope'></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="New Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" placeholder="Confirm Password" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <button type="submit" class="btn">
+            Reset Password
+        </button>
+
+        <div class="register-link">
+            <p>
+                Back To Login Page
+                <a href="javascript:void(0)" onclick="showLogin()">
+                    Click
+                </a>
+            </p>
+        </div>
+    </form>
+</div>
+
+<!-- WELCOME FORM -->
+<div class="wrapper" id="welcomeForm">
+    <form>
+        <h1 class="welcome-text">
+    Welcome to Delta Web<br>
+    to find your error error
+</h1>
+
+        <p style="text-align:center; margin-top:20px; color:#00ffffaa;">
+            System hack Successfully
+        </p>
+
+        
+    </form>
+</div>
+
+
+
+<!-- all content -->
+
+<audio id="hackSound" src="./hack.mp3"></audio>
+
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+
+function showForm(id){
+
+    document.querySelectorAll(".wrapper").forEach(form=>{
+        form.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+}
+
+function showLogin(){
+    showForm("loginForm");
+}
+
+function showReset(){
+    showForm("resetForm");
+}
+
+</script>
+    
+
+
+
+<script>
+    function showWelcome(){
+    showForm("welcomeForm");
+}
+function showForm(id){
+
+    document.querySelectorAll(".wrapper").forEach(form=>{
+        form.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+}</script>
+
+
+<Script>
+ 
+ function showWelcome(){
+    showForm("welcomeForm");
+    playHackSound();
+
+    function playHackSound() {
+    console.log("Sound Playing");
+
+    let audio = document.getElementById("hackSound");
+
+    audio.play()
+    .then(() => console.log("Audio started"))
+    .catch(err => console.error(err));
+}
+}
+
+</Script>
+
+
+
+
+<script>function showLoading(){
+
+    showForm("loadingForm");
+
+    let text = document.getElementById("loadingText");
+    let count = 0;
+
+    let anim = setInterval(()=>{
+        count++;
+
+        if(count % 4 == 0) text.innerHTML="Opening Delta.com";
+        else if(count % 4 == 1) text.innerHTML="Opening Delta.com.";
+        else if(count % 4 == 2) text.innerHTML="Opening Delta.com..";
+        else text.innerHTML="Opening Delta.com...";
+    },500);
+
+    setTimeout(()=>{
+        clearInterval(anim);
+        showForm("registerForm");
+    },3000);
+}</script>
+
+
+<script>
+function playHackSound() {
+    let audio = document.getElementById("hackSound");
+
+    audio.currentTime = 0;
+
+    audio.play().catch(err => {
+        console.log("Audio blocked:", err);
+    });
+}
+
+
+</script>
+
+<script>
+    function showWelcome() {
+    playHackSound();
+    showForm("welcomeForm");
+}
+</script>
+
+

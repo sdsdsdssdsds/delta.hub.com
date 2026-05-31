@@ -1,0 +1,377 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+
+
+
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(25, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #00ffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  
+  
+}
+
+/* Login Form */
+#loginForm{
+    width: 500px !important;
+    padding: 20px !important;
+    height: px; /* form ki height control */
+}
+
+/* Delta.com center me */
+#loginForm h1{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+/* Button ko upar lao */
+#loginForm .btn{
+    margin-top: -20px;
+}
+
+/* Input box spacing kam */
+#loginForm .input-box{
+    margin: -50px 0;
+}
+
+
+.wrapper.Loginform.register form
+
+
+
+
+
+
+
+.wrapper h1{
+  font-size: 36px;
+  color: #0bc7c7;
+  text-align: center;
+  
+    
+}
+
+
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  
+  margin: 30px 0;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fcfcfc;
+  padding: 20px 45px 20px 20px;
+  
+}
+.input-box input::placeholder{
+  color: #ffffff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+  accent-color: #d30012;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: #00ffdd;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #00ffdd;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+
+    transition: all 0.4s ease;
+}
+
+/* Mouse Hover Glow Effect */
+.wrapper .btn:hover{
+    background: #00ffff;
+    color: #000;
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        0 0 80px #00ffff;
+
+    transform: scale(1.05);
+}
+
+/* Button Press Effect */
+.wrapper .btn:active{
+    transform: scale(0.98);
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+
+.loader{
+    width: 80px;
+    height: 80px;
+    margin: 30px auto;
+
+    border: 6px solid rgba(255,255,255,0.15);
+    border-top: 6px solid #00ffff;
+    border-right: 6px solid #00ffff;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #00ffff,
+        inset 0 0 10px #00ffff;
+}
+
+/* =========================
+   FORM ENTRY ANIMATION
+========================= */
+
+.wrapper{
+    width: 420px;
+  background: transparent;
+  border: 2px solid rgba(25, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #00ffff;
+  border-radius: 12px;
+  padding: 30px 40px;
+
+  position: absolute;
+  
+  /* ONLY ONE transform system (IMPORTANT FIX) */
+  transform: translate(-50%, -50%) scale(0.95);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.4s ease;
+
+  
+}
+/* when visible */
+.wrapper.active{
+  opacity: 1;
+  pointer-events: auto;
+
+  /* SAME CENTER FIX HERE ALSO */
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* smooth pop + fade */
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+        transform: scale(0.8) translateY(30px);
+        filter: blur(10px);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* floating effect (form center me alive lagega) */
+.wrapper{
+    animation: floatBox 4s ease-in-out infinite;
+}
+
+/* glow breathing effect */
+@keyframes floatBox{
+    0%{
+        box-shadow: 0 0 10px #00ffff33;
+        transform: translateY(0px);
+    }
+    50%{
+        box-shadow: 0 0 25px #00ffff99;
+        transform: translateY(-6px);
+    }
+    100%{
+        box-shadow: 0 0 10px #00ffff33;
+        transform: translateY(0px);
+    }
+}
+
+/* input focus glow animation */
+.input-box input:focus{
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+    transition: 0.3s;
+}
+
+.welcome-text{
+  text-align: center;
+  color: #00ffff;
+  font-size: 24px;
+  line-height: 1.5;
+
+  animation: glowText 1.5s ease-in-out infinite, typingGlow 3s steps(40) 1;
+}
+
+/* glowing effect */
+@keyframes glowText{
+  0%{
+    text-shadow: 0 0 5px #00ffff;
+    transform: scale(1);
+  }
+  50%{
+    text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    transform: scale(1.03);
+  }
+  100%{
+    text-shadow: 0 0 5px #00ffff;
+    transform: scale(1);
+  }
+}
+
+/* typing effect (simple reveal) */
+@keyframes typingGlow{
+  0%{
+    opacity: 0;
+    letter-spacing: 5px;
+  }
+  100%{
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+.welcome-text{
+  text-align: center;
+  color: #00ffff;
+  font-size: 24px;
+  line-height: 1.5;
+
+  position: relative;
+  animation: glitchText 1.2s infinite;
+}
+
+/* glitch layers */
+.welcome-text::before,
+.welcome-text::after{
+  content: "Welcome to Delta Web\n to find your error error";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* red glitch */
+.welcome-text::before{
+  color: #ff004c;
+  transform: translate(2px, 0);
+  animation: glitchMove 0.8s infinite;
+}
+
+/* cyan glitch */
+.welcome-text::after{
+  color: #00ffff;
+  transform: translate(-2px, 0);
+  animation: glitchMove2 0.8s infinite;
+}
+
+/* main flicker */
+@keyframes glitchText{
+  0%{
+    text-shadow: 0 0 5px #00ffff;
+  }
+  20%{
+    text-shadow: 2px 0 #ff004c, -2px 0 #00ffff;
+  }
+  40%{
+    text-shadow: -2px 0 #ff004c, 2px 0 #00ffff;
+  }
+  60%{
+    text-shadow: 0 0 10px #00ffff;
+  }
+  100%{
+    text-shadow: 0 0 5px #00ffff;
+  }
+}
+
+/* shake */
+@keyframes glitchMove{
+  0%{ transform: translate(2px, 0); }
+  50%{ transform: translate(4px, -1px); }
+  100%{ transform: translate(2px, 0); }
+}
+
+@keyframes glitchMove2{
+  0%{ transform: translate(-2px, 0); }
+  50%{ transform: translate(-4px, 1px); }
+  100%{ transform: translate(-2px, 0); }
+}
+
